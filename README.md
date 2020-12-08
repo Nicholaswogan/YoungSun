@@ -2,6 +2,8 @@
 
 This is a Python wrapper of the `YoungSun` Fortran program from [Claire et al. 2012](https://iopscience.iop.org/article/10.1088/0004-637X/757/1/95/meta). The program calculates the solar flux at Earth at any time in Earth's 4.5 billion year old history.
 
+If you use this Python package for an academic paper, please throw [Claire et al. 2012](https://iopscience.iop.org/article/10.1088/0004-637X/757/1/95/meta) a citation.
+
 ## Installation
 To install this python package, download this repository, navigate a terminal to this repository, then run the command
 
