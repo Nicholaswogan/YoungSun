@@ -10,7 +10,7 @@ To install this python package, download this repository, navigate a terminal to
 ## Usage
 This package has only one function, `YoungSun.solarflux.solarflux`. Use it like this:
 
-```
+```python
 from YoungSun import solarflux
 time_ga = 2.7
 output_file = 'Sun_2.7Ga.txt'
