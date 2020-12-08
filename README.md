@@ -17,6 +17,6 @@ output_file = 'Sun_2.7Ga.txt'
 solarflux.solarflux(time_ga,output_file)
 ```
 
-The first argument to the function, `time_ga`, is a time in Earth's history in giga-anum (billions of years ago). The second argument, `output_file`, is the name of the output file.
+The first argument to the function, `time_ga`, is a time in Earth's history in giga-annum (billions of years ago). The second argument, `output_file`, is the name of the output file.
 
 Running the above code will generate a file `Sun_2.7Ga.txt` containing the solar flux at Earth 2.7 billion years ago.
