@@ -9,6 +9,8 @@ To install this python package, download this repository, navigate a terminal to
 
 `pip install .`
 
+For this to work, you need a modern version of `Python` with `pip` and `numpy` installed. 
+
 ## Usage
 This package has only one function, `YoungSun.solarflux.solarflux`. Use it like this:
 
