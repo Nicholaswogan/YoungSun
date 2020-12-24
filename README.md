@@ -9,16 +9,16 @@ To install this python package, download this repository, navigate a terminal to
 
 `pip install .`
 
-For this to work, you need a modern version of `Python` with `pip` and `numpy` installed. 
+For this to work, you need a modern version of `Python` with `pip` and `numpy` installed.
 
 ## Usage
-This package has only one function, `YoungSun.solarflux.solarflux`. Use it like this:
+This package has only one function, `YoungSun.solarflux`. Use it like this:
 
 ```python
 from YoungSun import solarflux
 time_ga = 2.7
 output_file = 'Sun_2.7Ga.txt'
-solarflux.solarflux(time_ga,output_file)
+solarflux(time_ga,output_file)
 ```
 
 The first argument to the function, `time_ga`, is a time in Earth's history in giga-annum (billions of years ago). The second argument, `output_file`, is the name of the output file.
