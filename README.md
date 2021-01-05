@@ -9,7 +9,7 @@ To install this python package, download this repository, navigate a terminal to
 
 `pip install .`
 
-For this to work, you need a modern version of `Python` with `pip` and `numpy` installed.
+For this to work, you need a modern version of `Python` with `pip` and `numpy` installed. Also, you need the GNU compiler collection (includes `gfortran`, `gcc`, etc.). If you are using a Mac, I suggest installing it with Homebrew: `brew install gcc`. For other operating systems [follow this GNU installation guide](https://gcc.gnu.org/install/binaries.html).
 
 ## Usage
 This package has only one function, `YoungSun.solarflux`. Use it like this:
