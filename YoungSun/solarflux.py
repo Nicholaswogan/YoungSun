@@ -10,5 +10,5 @@ def solarflux(timega,outfile):
     fil.write('Wavelength (nm)  '+'Solar flux (mW/m^2/nm)\n')
     for i in range(len(wv)):
         fil.write("{:>15}".format('%.4f'%wv[i])+'  '\
-                  +"{:<15}".format('%.6e'%flux[i])+'\n')
+                  +'%.6e'%flux[i]+'\n')
     fil.close()
