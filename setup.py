@@ -14,6 +14,6 @@ if __name__ == "__main__":
                   sources=["YoungSun/SunFlux.f90"]),]
     setup(name = 'YoungSun',
     packages=['YoungSun'],
-    version='1.1',
+    version='1.2',
     ext_modules=extensions,
     configuration=configuration)

@@ -11,7 +11,7 @@
 
         subroutine solarflux(timega,x3,y3)
           real*8, intent(in) :: timega
-          integer,parameter :: n = 26150
+          integer,parameter :: n = 26650
           real*8, dimension(n), intent(out) :: x3
           real*8, dimension(n), intent(out) :: y3
 
@@ -21,7 +21,7 @@
 
           nhead = 0
 
-          OPEN(UNIT=kin,file=trim(fileloc)//'data/composite.atl1_1', &
+          OPEN(UNIT=kin,file=trim(fileloc)//'data/composite.atl1_1_BB_append', &
                           STATUS='old')
           DO i = 1, nhead
             READ(kin,*)
