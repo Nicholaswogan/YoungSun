@@ -1,4 +1,4 @@
-      subroutine youngsun(n,timega,grid,fluxmult)
+      subroutine youngsun(n,timega,grid,rootdir,fluxmult)
         implicit none
         !  this subroutine calculates relative flux increments for each model wavelength
         ! based on the time before the present (timeGa)
@@ -12,6 +12,7 @@
         real*8, intent(in) :: timega
         real*8, dimension(n) ,intent(in) :: grid
         integer, intent(in) :: n
+        character(*), intent(in) :: rootdir
 
         !OUTPUTS
         !fluxmult is the relative multiplier defined on the Thuillier et al grid.
@@ -100,7 +101,7 @@
 !     1)find the relative flux
 
 ! file from ~/youngsun/kurucz/fluxreadAGE.pro
-        open(65, file=trim(fileloc)//'data/kuruczflux.dat', &
+        open(65, file=trim(rootdir)//'data/kuruczflux.dat', &
                 status='UNKNOWN')
 !note the .dat file has fluxes in W/m^2/ster converted from
 !the frequency units output by kurucz models
