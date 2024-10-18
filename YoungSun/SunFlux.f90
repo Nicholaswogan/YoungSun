@@ -6,6 +6,23 @@ contains
   include "inter1.f90"
   include "Spline.f90"
 
+  subroutine youngsun_c(n, timega, grid, rootdir_c, fluxmult) bind(c)
+    use iso_c_binding
+    integer(c_int), value, intent(in) :: n
+    real(c_double), value, intent(in) :: timega
+    real(c_double), intent(in) :: grid(n)
+    character(kind=c_char), intent(in) :: rootdir_c(*)
+    real(c_double), intent(out) :: fluxmult(n)
+
+    character(:), allocatable :: rootdir
+
+    allocate(character(len=len_cstring(rootdir_c))::rootdir)
+    call copy_string_ctof(rootdir_c, rootdir)
+
+    call youngsun(n, timega, grid, rootdir, fluxmult)
+
+  end subroutine
+
   subroutine solarflux(timega, rootdir_c, x3, y3) bind(c)
     use iso_c_binding, only: c_double, c_char
     real(c_double), value, intent(in) :: timega

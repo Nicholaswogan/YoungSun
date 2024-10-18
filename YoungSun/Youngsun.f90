@@ -177,6 +177,7 @@
 
 
 !     7) compute relative flux at earth on kurucz grid
+        relphotokuruczgrid = 0.0
         relphotokuruczgrid(100:1221)=photothen(100:1221)/ &
                                      photonow(100:1221)
 !     wave[100]=69.5 nm, and photonow is 0 below this. In the final code,

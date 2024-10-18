@@ -22,6 +22,25 @@ solarflux_c.argtypes = [
 ]
 solarflux_c.restype = None
 
+youngsun_c = libyoungsun.youngsun_c
+youngsun_c.argtypes = [
+    ct.c_int,
+    ct.c_double,
+    ct.POINTER(ct.c_double),
+    ct.c_char_p,
+    ct.POINTER(ct.c_double),
+]
+youngsun_c.restype = None
+
+def youngsun(timega, grid):
+    grid = grid.astype(np.double)
+    n = len(grid)
+    fluxmult = np.empty(n,np.double)
+    rootdir_c = ct.create_string_buffer(rootdir.encode())
+    c_double_p = ct.POINTER(ct.c_double)
+    youngsun_c(n, timega, grid.ctypes.data_as(c_double_p), rootdir_c, fluxmult.ctypes.data_as(c_double_p))
+    return fluxmult
+
 def solarflux(timega, outfile):
     
     timega_ = float(timega)
